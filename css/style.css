@@ -1,0 +1,10 @@
+.fixed-left {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: 250px; 
+    height: 100vh; 
+    overflow: auto; 
+    background-color: #f8f9fa; 
+    border-right: 1px solid #ddd; 
+}
