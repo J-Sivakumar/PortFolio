@@ -37,7 +37,7 @@
                           <h2>About Me<a name="About"></a></h2>
                           <p>Hello! I'm J Sivakumar, a final-year Computer Science Engineering student with a passion for technology and problem-solving. My academic journey has provided me with a strong foundation in programming, algorithms, and software development, and I am excited to apply these skills in real-world scenarios.</p>
                           <p>I'm currently working on my final year project, which focuses on building a predictive model for checking loyalty of bank customers. In my free time, I enjoy listening to music, doing meditation and reading books.</p>
-                    <a href="https://www.linkedin.com/in/jayarama-gari-sivakumar/" class="btn btn-primary" target="_blank">Connect on LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/jayarama-gari-sivakumar/" class="btn btn-warning" target="_blank">Connect on LinkedIn</a>
                         </div>
                       </div>
                     </div>
@@ -164,20 +164,45 @@
                     </ul>
                   </div>
                   <br><br>
-                  <div class="card">
-                    <div class="card-header" style="background-color: rgb(146, 242, 73);">
-                      Resume<a name="Resume"></a> 
+
+                  <button class="btn btn-dark" id="toggleResume">View Resume </button><a name="Resume"></a>
+                  <div id="toggleElement1" class="d-none">
+                    <div class="card">
+                      <div class="card-header" style="background-color: rgb(146, 242, 73);">
+                        Resume
+                      </div>
+                      <div class="card-body">
+                        <div class="container">
+                          <div class="row justify-content-center">
+                              <div class="col-12 col-md-10 col-lg-8">
+                                  <iframe src="Assets/Siva-resume.pdf" style="width: 100%; height: 100vh;" frameborder="0" allowfullscreen></iframe>
+                              </div>
+                      
+                          </div>
+                      </div>
+                      
+                      </div>
                     </div>
-                    <div class="card-body">
-                      <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-md-10 col-lg-8">
-                                <iframe src="Assets/Siva-resume.pdf" style="width: 100%; height: 100vh;" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                    
-                        </div>
-                    </div>
-                    
+                  </div>
+
+                  <br><br>
+                  <button class="btn btn-success" id="toggleButton">Contact Me</button><a name="Contact"></a>
+                  <div id="toggleElement" class="d-none">
+                    <div class="card">
+                      <div class="card-header" style="background-color: rgb(203, 73, 242);">
+                        Contact Form
+                      </div>
+                      <div class="card-body">
+                        <div class="container">
+                          <div class="row justify-content-center">
+                              <div class="col-12 col-md-10 col-lg-8">
+                                <iframe src="https://forms.gle/DLM6DCZMbqECGf8V8" style="width: 100%;height:125vh ;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                              </div>
+                      
+                          </div>
+                      </div>
+                      
+                      </div>
                     </div>
                   </div>
                   <br><br>
@@ -223,7 +248,7 @@
                   <br><br>
                   <footer class="bg-dark text-white py-3 mt-5">
                     <div class="container text-center col-md-12">
-                        <p>&copy; 2024 J Sivakumar. All Rights Reserved.<a name="Contact"></a></p>
+                        <p>&copy; 2024 J Sivakumar. All Rights Reserved.</p>
                         <p>
                             <a href="https://www.linkedin.com/in/jayarama-gari-sivakumar/" class="text-white" target="_blank">LinkedIn</a> | 
                             <a href="https://github.com/J-Sivakumar" class="text-white" target="_blank">GitHub</a> | 
@@ -235,5 +260,28 @@
               </div>
             </div>
           </div>
+          <script>
+            // For contact form
+            document.getElementById('toggleButton').onclick = function () {
+                var element = document.getElementById('toggleElement');
+                element.classList.toggle('d-none');
+                var contact=document.getElementById('toggleButton');
+                if(contact.innerText=="Contact Me")
+                    contact.innerText="Close Form";
+                else
+                    contact.innerText="Contact Me";
+            };
+
+            //for resume
+            document.getElementById('toggleResume').onclick = function () {
+                var element = document.getElementById('toggleElement1');
+                element.classList.toggle('d-none');
+                var res=document.getElementById('toggleResume');
+                if(res.innerText=="View Resume")
+                    res.innerText="Close Resume";
+                else
+                    res.innerText="View Resume";
+            };
+        </script>
 </body>
 </html>
